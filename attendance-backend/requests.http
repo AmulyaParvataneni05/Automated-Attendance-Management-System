@@ -1,0 +1,144 @@
+### Register User
+# POST http://localhost:5000/api/auth/register
+# Content-Type: application/json
+
+# {
+#   "name": "Factulty1",
+#   "email": "admin1@gmail.com",
+#   "password": "Factulty1"
+# }
+
+###
+
+### Login User
+# POST http://localhost:5000/api/auth/login_faculty
+# Content-Type: application/json
+
+# {
+#   "email": "admin1@gmail.com",
+#   "password": "Factulty1"
+#}
+
+###
+#Admin Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin@2026"
+}
+
+###
+
+### Add Student
+### Add Student (WITH IMAGE UPLOAD)
+POST http://localhost:5000/api/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX3N0YXRpY19pZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTkwMzU0NywiZXhwIjoxNzc1OTg5OTQ3fQ.Vm7ei1cxlgSo43vU5l9gJ989AMgfofjfk_GDQ6cVUfc
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="role"
+
+student
+--boundary
+Content-Disposition: form-data; name="rollNo"
+
+20CS006
+--boundary
+Content-Disposition: form-data; name="name"
+
+Tanuja
+--boundary
+Content-Disposition: form-data; name="year"
+
+4
+--boundary
+Content-Disposition: form-data; name="section"
+
+2
+--boundary
+Content-Disposition: form-data; name="photo"; filename="20CS001.jpg"
+Content-Type: image/jpeg
+
+< ./tanuja.jpg
+--boundary--
+
+###
+### Add Faculty (WITHOUT IMAGE UPLOAD)
+POST http://localhost:5000/api/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX3N0YXRpY19pZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTkwMzU0NywiZXhwIjoxNzc1OTg5OTQ3fQ.Vm7ei1cxlgSo43vU5l9gJ989AMgfofjfk_GDQ6cVUfc
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="role"
+
+faculty
+--boundary
+Content-Disposition: form-data; name="rollNo"
+
+FAC001
+--boundary
+Content-Disposition: form-data; name="name"
+
+Faculty1
+--boundary--
+
+### Faculty Login
+POST http://localhost:5000/api/students/login
+Content-Type: application/json
+
+{
+  "rollNo": "FAC001",
+  "password": "FAC001@2026"
+}
+
+### Get Students
+GET http://localhost:5000/api/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjYyMWE2ODJjYmJjNjRiZjViYjYyZCIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY4MzAwOTgwLCJleHAiOjE3NjgzODczODB9.sfBPrXVyagy8ni-NqfLZ6uf38X29Xczw4gEzgdH0_Kg
+
+###
+
+### Mark Attendance
+POST http://localhost:5000/api/attendance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjYyMWE2ODJjYmJjNjRiZjViYjYyZCIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY4MzAwOTgwLCJleHAiOjE3NjgzODczODB9.sfBPrXVyagy8ni-NqfLZ6uf38X29Xczw4gEzgdH0_Kg
+Content-Type: application/json
+
+{
+  "student": "696621e282cbbc64bf5bb630",
+  "status": "present"
+}
+
+###
+
+### Get Attendance
+GET http://localhost:5000/api/attendance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjNlNTQ3Mjk5YmZhMDRkYjEzNTJjMCIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY4MzAwMDIxLCJleHAiOjE3NjgzODY0MjF9.9S7gUJ_blX2ooQuMFRTs8IZxd4cW1m77CcIwN7v0T0A
+
+
+### Mark Bulk Attendance (Python equivalent)
+POST http://localhost:5000/api/attendance/mark-bulk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDJhZmQxNDZhMWJhYTJmZDBiOWE4MiIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzc1OTAwODY0LCJleHAiOjE3NzU5ODcyNjR9.TFKes2r0Pav-pc__L4nb6NDl_cYvwB99SSNmsoKTSmc
+Content-Type: application/json
+
+{
+  "year": "4",
+  "section": "3",
+  "recognized": ["22501A05E9", "22501A05E8"]
+}
+
+### Start Attendance
+POST http://localhost:5000/api/attendance/start
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDJhZmQxNDZhMWJhYTJmZDBiOWE4MiIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzc1OTAwODY0LCJleHAiOjE3NzU5ODcyNjR9.TFKes2r0Pav-pc__L4nb6NDl_cYvwB99SSNmsoKTSmc
+Content-Type: application/json
+
+{
+  "lectureId": "Factulty1",
+  "year":4,
+  "section":3
+}
+
+###
+POST http://localhost:5000/api/attendance/stop
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDJhZmQxNDZhMWJhYTJmZDBiOWE4MiIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzc1OTAwODY0LCJleHAiOjE3NzU5ODcyNjR9.TFKes2r0Pav-pc__L4nb6NDl_cYvwB99SSNmsoKTSmc
+

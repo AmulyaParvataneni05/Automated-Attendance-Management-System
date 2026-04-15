@@ -1,0 +1,128 @@
+.admin-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-title {
+  font-size: 2.5rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  gap: 0px;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 30px;
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.register-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.register-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: white;
+  border: 2px solid green;
+  color: green;
+  transform: scale(1.05);
+}
+
+.dropdowns {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.dropdowns select {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.charts {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+.register {
+  width: 100%;
+  max-width: 400px;
+  background-color: #93595967;
+  box-shadow: 10px 10px 10px #1e3a8a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.analysis {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ee97ad41;
+  box-shadow: 10px 10px 10px #5d72ab;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.close-btn-admin {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.get-analysis-btn {
+  margin-left: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: green;
+  color: white;
+}

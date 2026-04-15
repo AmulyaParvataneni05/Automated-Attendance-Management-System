@@ -1,0 +1,139 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rollno-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.rollno-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 400px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.rollno-input.error {
+  border-color: red; /* Red border on error */
+}
+
+.check-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.check-button:hover {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.attendance-message {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.login-title {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.login-buttons {
+  margin: 0rem 0 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.login-btn {
+  padding: 1rem 1rem;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.admin-btn {
+  background-color: #333;
+  color: #c29c9c;
+}
+
+.faculty-btn {
+  background-color: #333;
+  color: #c29c9c;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  background-color: white !important ;
+  border: 2px solid green;
+  color: green;
+}
+.leaderboard {
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 800px;
+}
+
+.leaderboard-header {
+  background-color: #222;
+  color: #fff;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 8px 8px 0 0;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e6e6e6;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border: 1px solid #444;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background-color: #d1d1d1;
+  font-weight: 700;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
